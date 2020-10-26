@@ -1,0 +1,48 @@
+---
+title: "Enzymes in Pancreatins"
+author: "Fengyuan Liu"
+date: "2020/8/18"
+output:
+  word_document: default
+  html_document:
+    df_print: paged
+---
+# Enzymes
+
+I have tested the activities of all the enzymes available and below are the results:
+
+## Old Pancreatin (P1750-100G)
+lot number: SLBR5608V
+
+Enzyme       | Activity (U/mg)
+------------ | ---------------
+Amylase      | 24.2
+Trypsin      | 2.2
+Chymotrypsin | 1.0
+Lipase       | 32.2
+
+## New Pancreatin (P7545-100G)
+lot number: SLBM0006V
+
+Enzyme       | Activity (U/mg)
+------------ | ---------------
+Amylase      | 66.6
+Trypsin      | 4.1
+Chymotrypsin | 2.1
+Lipase       | 64.9
+
+## New Individual Enzymes Purchased Last Year
+
+Enzyme       | Activity (U/mg) | Product Code & Lot#
+------------ | --------------- | -------------------
+Amylase      | 107.1           | A9857-MU SLBZ1496
+Trypsin      | 111.1           | T0303-10G SCCBF350
+Chymotrypsin | 45.6            | C4129-10G SLBV2540
+
+If we use the new pancreatin, and based on the activity of trypsin (100 U/mL), we need to add 100*40/4.1 = 976 mg in one tube. The activity of **amylase and chymotrysin** will be **lager** than the recomended values, but the activity of **lipase** will be **smaller**. One bottle is 100 G, so we can perform about **100** tubes totally using one bottle of this new pancreatin. 
+
+
+# Sample for the Test 
+
+I am going to test it with oat flour and oat bread (commercial oat bread)
+
