@@ -5,7 +5,7 @@ germinated_rye_bar <- bread_vit %>% filter(sample == "Germinated Rye Flat") %>% 
                                                                                                                                      axis.text = element_text(size = 10), legend.position = c(0.8, 1), legend.title = element_blank(), 
                                                                                                                                      legend.text = element_text(size = 10),axis.title.y = element_text(size = 11)) +
   annotate('text',x = c("PGA", "10-HCO-H2", "10-HCO-PGA", "H4", "5-CH3-H4", "5-HCO-H4","5,10-CH+-H4"), 
-           y = c(2, 2, 11, 7, 5.5, 2, 5), label = c(" ", " ", "**", " ", "**", " ", " "))
+           y = c(2, 2, 11, 7, 5.5, 3, 5), label = c(" ", " ", "**", " ", "*", "*", " "))
 
 #piechart for rye toast
 germinated_rye_p1 <- bread_vit_mean %>% filter(Group.1 == "Germinated Rye Flat" & Group.2 == "Bread") %>% 

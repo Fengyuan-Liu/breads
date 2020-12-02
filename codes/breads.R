@@ -1,12 +1,14 @@
-bread2 <- Breads_batch_2 %>% mutate(folate = if_else(folate < 0, 0, folate))
+bread1 <- Breads_batch_1 %>% mutate(folate = if_else(folate < 0, 0, folate))
 
 x_ord <- c ("Total", "PGA", "10-HCO-H2", "10-HCO-PGA", "H4", "5-CH3-H4", "5-HCO-H4","5,10-CH+-H4")
 bread2$component <- factor(bread2$component, levels = x_ord)
+comp_ord <- c("PGA", "10-HCO-H2", "10-HCO-PGA", "H4", "5-CH3-H4", "5-HCO-H4","5,10-CH+-H4")
 
 #get the mean
 
-bread_vit2 <- bread2 %>% filter(component != "Total") 
-bread_vit_mean2 <- aggregate(bread_vit2$folate, list(bread_vit2$sample, bread_vit2$treatment, bread_vit2$component), mean)
+bread_vit <- bread1 %>% filter(component != "Total") 
+bread_vit_mean <- aggregate(bread_vit$folate, list(bread_vit$sample, bread_vit$treatment, bread_vit$component), mean)
+bread_vit_mean$Group.3 <- factor(bread_vit_mean$Group.3, levels = comp_ord)
 
 #barplot for rye toast
 
