@@ -14,3 +14,5 @@ position = position_dodge(0.8), xlab = "", ylab = "Folate (ng)", x.text.angle = 
 theme(plot.title = element_text(hjust = 0.5),axis.text = element_text(size = 10), 
 legend.position = c(0.83,0.9), legend.title = element_blank(),legend.text = element_text(size = 10),
 axis.title.y = element_text(size = 11))
+
+no_cur <- STD_cur %>% filter(treatment == "No")
