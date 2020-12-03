@@ -19,7 +19,7 @@ ylab = "Folate (µg/100g FM)", x.text.angle = 30) + theme(plot.title = element_t
 axis.text = element_text(size = 10), legend.position = c(0.8, 1), legend.title = element_blank(), 
 legend.text = element_text(size = 10),axis.title.y = element_text(size = 11)) +
 annotate('text',x = c("PGA", "10-HCO-H2", "10-HCO-PGA", "H4", "5-CH3-H4", "5-HCO-H4","5,10-CH+-H4"), 
-y = c(2, 10, 10, 3, 1, 4, 3), label = c(" ", "**", "*", "", "*", "*", " "))
+y = c(2, 1, 10, 3, 2.5, 4, 2), label = c(" ", " ", " ", "", "**", "*", "**"))
 
 #piechart 
 rye_hole_p1 <- bread_vit_mean2 %>% filter(Group.1 == "Hole Rye" & Group.2 == "Bread") %>% 
