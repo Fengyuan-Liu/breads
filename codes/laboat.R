@@ -32,9 +32,9 @@ perttu_p2 <- laboat_vit_mean %>% filter(Group.1 == "Oat_perttu" & Group.2 == "Br
 perttu_pie <- ggarrange(perttu_p1, perttu_p2, ncol = 1, nrow = 2, 
                            common.legend = TRUE, legend = "right")
 
-perttu <- ggarrange(perttu_bar, perttu_pie, widths = c(2, 1), labels = c("A a) Oat_perttu", "b)"),
+perttu <- ggarrange(perttu_bar, perttu_pie, widths = c(2, 1), labels = c("C a) Oat_perttu", "b)"),
                        label.x = -0.1, font.label = list(size = 11))
-perttu
+
 
 # meeri
 meeri_bar <- laboat_vit %>% filter(sample == "Oat_meeri") %>%  ggbarplot(x = "component", y = "folate",
@@ -62,7 +62,7 @@ meeri_pie <- ggarrange(meeri_p1, meeri_p2, ncol = 1, nrow = 2,
 
 meeri <- ggarrange(meeri_bar, meeri_pie, widths = c(2, 1), labels = c("A a) Oat_meeri", "b)"),
                     label.x = -0.1, font.label = list(size = 11))
-meeri
+
 
 # peppi
 peppi_bar <- laboat_vit %>% filter(sample == "Oat_peppi") %>%  ggbarplot(x = "component", y = "folate",
@@ -88,6 +88,21 @@ peppi_p2 <- laboat_vit_mean %>% filter(Group.1 == "Oat_peppi" & Group.2 == "Brea
 peppi_pie <- ggarrange(peppi_p1, peppi_p2, ncol = 1, nrow = 2, 
                         common.legend = TRUE, legend = "right")
 
-peppi <- ggarrange(peppi_bar, peppi_pie, widths = c(2, 1), labels = c("A a) Oat_peppi", "b)"),
+peppi <- ggarrange(peppi_bar, peppi_pie, widths = c(2, 1), labels = c("B a) Oat_peppi", "b)"),
                     label.x = -0.1, font.label = list(size = 11))
-peppi
+
+
+# table
+
+laboatA <- c("17.8 ± 3.6", "5.5 ± 0.2*", "31 ± 1")
+laboatB <- c("18.8 ± 3.9", "8.7 ± 0.6*", "46 ± 3")
+laboatC <- c("11.5 ± 0.9", "11.7 ± 1.3", "102 ± 11")
+Items <- c("Total Folate before Digestion\n(µg/100g FM)", "Total Folate after Digestion\n(µg/100g FM)", "Folate Bioaccessibility (%)")
+table_laboat <- data.frame(items, laboat1, laboat2, laboat3)
+colnames(table_laboat) <- c(" ", "LaboatA", "LaboatB", "LaboatC")
+table_figure <-ggtexttable(table_laboat, theme = ttheme("light"), rows = NULL) %>% tab_add_title(text = "D", face = "bold", padding = unit(0.1, "line"))
+ 
+  
+#aggrange everything
+
+ggarrange(meeri, peppi, perttu, table_figure, ncol = 2, nrow = 2)
