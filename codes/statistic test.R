@@ -3,7 +3,7 @@ vitamins <- c('H4', 'PGA', '5,10-CH+-H4', '10-HCO-PGA', '5-CH3-H4', '10-HCO-H2',
 #t test
 data_empty <-data.frame()
 for (i in vitamins) {
-  data_empty <- laboat %>% filter(sample == "Oat_perttu") %>% filter(component == i)
+  data_empty <- bread2 %>% filter(sample == "Hole Rye wheat") %>% filter(component == i)
   print(i)
   print(t.test(data_empty$folate ~ data_empty$treatment)
 }
